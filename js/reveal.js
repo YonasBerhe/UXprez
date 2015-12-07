@@ -455,6 +455,8 @@
 		dom.background = createSingletonNode( dom.wrapper, 'div', 'backgrounds', null );
 
 		// Progress bar
+		dom.progress = createSingletonNode( dom.wrapper, 'div', 'progress', '<span></span>' );
+		dom.progressbar = dom.progress.querySelector( 'span' );
 
 		// Arrow controls
 		createSingletonNode( dom.wrapper, 'aside', 'controls',
@@ -880,7 +882,10 @@
 		dom.wrapper.setAttribute( 'data-transition-speed', config.transitionSpeed );
 		dom.wrapper.setAttribute( 'data-background-transition', config.backgroundTransition );
 
-	
+		dom.controls.style.display = config.controls ? 'block' : 'none';
+		dom.progress.style.display = config.progress ? 'block' : 'none';
+		dom.slideNumber.style.display = config.slideNumber && !isPrintingPDF() ? 'block' : 'none';
+
 		if( config.rtl ) {
 			dom.wrapper.classList.add( 'rtl' );
 		}

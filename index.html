@@ -16,7 +16,9 @@
 
   <link rel="stylesheet" href="css/reveal.css">
   <link rel="stylesheet" href="css/theme/black.css" id="theme">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/flexboxgrid/6.3.0/flexboxgrid.min.css" type="text/css">
   <link rel="stylesheet" href="css/main.css" media="screen" title="no title" charset="utf-8">
+
   <!-- Code syntax highlighting -->
   <link rel="stylesheet" href="lib/css/zenburn.css">
 
@@ -56,101 +58,83 @@
         <h4 class="fragment"> Suggest Strategy</h4>
         <h4 class="fragment">Limitations</h4>
       </section>
-
-
-<!-- press F to full screen app -->
+      <!-- press F to full screen app -->
       <section>
-        <div class="fragment">
-          <h4>Sign Navigation</h4>
+        <span>
+          <br>
+          <h4>Navigation</h4>
+          <br>
           <h4>Visually Impaired Support</h4>
+          <br>
           <h4>Sampling</h4>
-
-        </div>
-
+          <br>
+        </span>
       </section>
 
       <!-- Example of nested vertical slides -->
-      <section>
+      <section class="sign-nav">
         <section>
-          <h2>Sign Navigation</h2>
-          <p>Slides can be nested inside of each other.</p>
-          <p>Use the
-            <em>Space</em> key to navigate through all slides.</p>
-          <br>
-          <a href="#" class="navigate-down">
-            <img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-          </a>
+          <h2>Navigation</h2>
+        </section>
+      </section>
+
+      <section>
+        <div class="row">
+          <div class="col-xs">
+            <div class="box-row fragment">h</div>
+          </div>
+          <div class="col-xs">
+            <div class="box-row">
+                  <img data-src="https://doozymagazine.files.wordpress.com/2011/11/black_guy_looking_up.jpg?w=191h=288" alt="Up arrow">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="visual-nav">
+        <section>
+          <h2>VISUALLY IMPAIRED SUPPORT</h2>
         </section>
         <section>
           <h2>Basement Level 1</h2>
           <p>Nested slides are useful for adding additional detail underneath a high level horizontal slide.</p>
         </section>
-        <section>
+        <!-- <section>
           <h2>Basement Level 2</h2>
           <p>That's it, time to go back up.</p>
           <br>
           <a href="#/2">
             <img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
           </a>
-        </section>
+        </section> -->
       </section>
 
 
 
       <section>
         <section>
-          <h2>Sign Navigation</h2>
-          <p>Slides can be nested inside of each other.</p>
-          <p>Use the
-            <em>Space</em> key to navigate through all slides.</p>
-          <br>
-          <a href="#" class="navigate-down">
-            <img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-          </a>
+          <h2>Sampling</h2>
         </section>
         <section>
-          <h2>Basement Level 1</h2>
-          <p>Nested slides are useful for adding additional detail underneath a high level horizontal slide.</p>
+          <div class="row">
+            <div class="col-xs">
+              <div class="box-row">Samples have boosted sales in some cases by as much as 2,000 percent.</div>
+            </div>
+            <div class="col-xs">
+              <div class="box-row"></div>
+            </div>
+          </div>
+
+
         </section>
-        <section>
+        <!-- <section>
           <h2>Basement Level 2</h2>
           <p>That's it, time to go back up.</p>
           <br>
           <a href="#/2">
             <img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
           </a>
-        </section>
-      </section>
-
-
-
-
-
-      <section>
-        <section id="fragments">
-          <h2>Fragments</h2>
-          <p>Hit the next arrow...</p>
-          <p class="fragment">... to step through ...</p>
-          <p>
-            <span class="fragment">... a</span>
-            <span class="fragment">fragmented</span>
-            <span class="fragment">slide.</span>
-          </p>
-
-          <aside class="notes">
-            This slide has fragments which are also stepped through in the notes window.
-          </aside>
-        </section>
-        <section>
-          <h2>Fragment Styles</h2>
-          <p>There's different types of fragments, like:</p>
-          <p class="fragment grow">grow</p>
-          <p class="fragment shrink">shrink</p>
-          <p class="fragment fade-out">fade-out</p>
-          <p class="fragment current-visible">current-visible</p>
-          <p class="fragment highlight-red">highlight-red</p>
-          <p class="fragment highlight-blue">highlight-blue</p>
-        </section>
+        </section> -->
       </section>
 
       <section id="transitions">
@@ -389,55 +373,55 @@
         </p>
       </section>
 
+      </div>
+
     </div>
 
-  </div>
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
 
-  <script src="lib/js/head.min.js"></script>
-  <script src="js/reveal.js"></script>
+    <script>
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
 
-  <script>
-    // Full list of configuration options available at:
-    // https://github.com/hakimel/reveal.js#configuration
-    Reveal.initialize({
-      controls: true,
-      progress: true,
-      history: true,
-      center: true,
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
 
-      transition: 'slide', // none/fade/slide/convex/concave/zoom
-
-      // Optional reveal.js plugins
-      dependencies: [{
-        src: 'lib/js/classList.js',
-        condition: function() {
-          return !document.body.classList;
-        }
-      }, {
-        src: 'plugin/markdown/marked.js',
-        condition: function() {
-          return !!document.querySelector('[data-markdown]');
-        }
-      }, {
-        src: 'plugin/markdown/markdown.js',
-        condition: function() {
-          return !!document.querySelector('[data-markdown]');
-        }
-      }, {
-        src: 'plugin/highlight/highlight.js',
-        async: true,
-        callback: function() {
-          hljs.initHighlightingOnLoad();
-        }
-      }, {
-        src: 'plugin/zoom-js/zoom.js',
-        async: true
-      }, {
-        src: 'plugin/notes/notes.js',
-        async: true
-      }]
-    });
-  </script>
+        // Optional reveal.js plugins
+        dependencies: [{
+          src: 'lib/js/classList.js',
+          condition: function() {
+            return !document.body.classList;
+          }
+        }, {
+          src: 'plugin/markdown/marked.js',
+          condition: function() {
+            return !!document.querySelector('[data-markdown]');
+          }
+        }, {
+          src: 'plugin/markdown/markdown.js',
+          condition: function() {
+            return !!document.querySelector('[data-markdown]');
+          }
+        }, {
+          src: 'plugin/highlight/highlight.js',
+          async: true,
+          callback: function() {
+            hljs.initHighlightingOnLoad();
+          }
+        }, {
+          src: 'plugin/zoom-js/zoom.js',
+          async: true
+        }, {
+          src: 'plugin/notes/notes.js',
+          async: true
+        }]
+      });
+    </script>
 
 </body>
 
